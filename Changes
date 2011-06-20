@@ -1,0 +1,63 @@
+0.98_1 (2011-06-20)
+
+    API Changes:
+        - Renamed from Sys::Command to Sys::Cmd.
+        - In doing the above rename the following functionality changes
+          also took place: "Sys::Command::Process" became "Sys::Cmd".
+          "Sys::Command" became "Sys::Cmd::Template".
+
+    New Features:
+        - N/A
+
+    Enhancements:
+        - Stole some of Sys::Commands tests.
+
+    Bug Fixes:
+        - N/A
+
+0.04 (2011-06-09)
+
+    API Changes:
+        - N/A
+
+    New Features:
+        - N/A
+
+    Enhancements:
+        - Hopefully fix failing tests due to not finding 'perl'
+
+    Bug Fixes:
+        - N/A
+
+0.03 (2011-06-07)
+
+    API Changes:
+        - N/A
+
+    New Features:
+        - N/A
+
+    Enhancements:
+        - N/A
+
+    Bug Fixes:
+        - Make Makefile.PL (and META.yml) point to correct repository.
+        - Add missing Sub::Exporter dependency
+
+0.02 (2011-06-06)
+
+    API Changes:
+        - N/A
+
+    New Features:
+        - N/A
+
+    Enhancements:
+        - N/A
+
+    Bug Fixes:
+        - Fixed README and Sys::Command::Process Documentation errors.
+
+0.01 (2011-06-06)
+
+    Initial Release

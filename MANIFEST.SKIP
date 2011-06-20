@@ -1,0 +1,8 @@
+build-stamp
+install-stamp
+Makefile$
+MANIFEST.bak
+.git
+\.swp$
+.perltidyrc
+x/
