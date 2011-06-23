@@ -11,7 +11,7 @@ use IPC::Open3 qw/open3/;
 use File::Which qw/which/;
 use Log::Any qw/$log/;
 
-our $VERSION = '0.98_1';
+our $VERSION = '0.98_2';
 our $CONFESS;
 
 # MSWin32 support

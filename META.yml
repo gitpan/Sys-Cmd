@@ -32,4 +32,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: http://github.com/mlawren/sys-cmd.git/
-version: 0.98_1
+version: 0.98_2
