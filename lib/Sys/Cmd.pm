@@ -12,7 +12,7 @@ use File::Which qw/which/;
 use Log::Any qw/$log/;
 use File::Spec::Functions qw/splitdir/;
 
-our $VERSION = '0.98_4';
+our $VERSION = '0.05';
 our $CONFESS;
 
 # MSWin32 support
@@ -81,7 +81,7 @@ sub spawn {
     defined $bin || confess '$cmd must be defined';
 
     if ( !-f $bin and splitdir($bin) < 2 ) {
-        $cmd[0] = which($bin);
+        $cmd[0] = which($bin) || confess 'command not found: ' . $bin;
     }
 
     my @opts = grep { ref $_ eq 'HASH' } @_;
@@ -100,6 +100,9 @@ has 'cmd' => (
     isa => sub {
         ref $_[0] eq 'ARRAY' || confess "cmd must be ARRAYREF";
         @{ $_[0] } || confess "Missing cmd elements";
+        if ( grep { !defined $_ } @{ $_[0] } ) {
+            confess 'cmd array cannot contain undef elements';
+        }
     },
     required => 1,
 );
@@ -242,7 +245,7 @@ sub BUILD {
     # some input was provided
     if ( $self->have_input ) {
         local $SIG{PIPE} =
-          sub { croak "Broken pipe when writing to:" . $self->cmdline };
+          sub { warn "Broken pipe when writing to:" . $self->cmdline };
 
         print { $self->stdin } $self->input if length $self->input;
 
