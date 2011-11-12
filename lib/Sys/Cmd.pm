@@ -12,7 +12,7 @@ use Log::Any qw/$log/;
 use File::Spec::Functions qw/splitdir/;
 use Sub::Exporter -setup => { exports => [qw/spawn run runx/], };
 
-our $VERSION = '0.07_1';
+our $VERSION = '0.07_2';
 our $CONFESS;
 
 # Trap the real STDIN/ERR/OUT file handles in case someone
