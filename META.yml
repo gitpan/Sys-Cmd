@@ -27,6 +27,7 @@ requires:
   Carp: 0
   Cwd: 0
   File::Which: 0
+  File::chdir: 0.08
   IO::Handle: 0
   IPC::Open3: 0
   Log::Any: 0
@@ -36,4 +37,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: http://github.com/mlawren/sys-cmd
-version: 0.05
+version: 0.07_1
