@@ -1,0 +1,64 @@
+{
+   "abstract" : "run a system command or spawn a system processes",
+   "author" : [
+      "Mark Lawrence <nomad@null.net>, based heavily on"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Install version 1.06, CPAN::Meta::Converter version 2.112150",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Sys-Cmd",
+   "no_index" : {
+      "directory" : [
+         "inc",
+         "t",
+         "xt"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Cwd" : 0,
+            "Data::Dumper" : 0,
+            "ExtUtils::MakeMaker" : "6.59",
+            "File::Spec" : 0,
+            "File::Temp" : 0,
+            "Test::More" : 0
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.59"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : 0,
+            "Cwd" : 0,
+            "File::Which" : 0,
+            "File::chdir" : "0.08",
+            "IO::Handle" : 0,
+            "Log::Any" : 0,
+            "Moo" : 0,
+            "POSIX" : 0,
+            "Sub::Exporter" : 0,
+            "perl" : "5.006"
+         }
+      }
+   },
+   "release_status" : "testing",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ],
+      "repository" : {
+         "url" : "http://github.com/mlawren/sys-cmd"
+      }
+   },
+   "version" : "0.07_3"
+}

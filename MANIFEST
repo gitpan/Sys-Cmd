@@ -15,11 +15,16 @@ lib/Sys/Cmd.pod
 lib/Sys/Cmd/Template.pm
 lib/Sys/Cmd/Template.pod
 Makefile.PL
-MANIFEST
+MANIFEST			This list of files
 MANIFEST.SKIP
 META.yml
+MYMETA.json
+MYMETA.yml
 README
 t/10-command.t
+t/11-reaper.t
+t/90-command.t
+t/90-output.t
 t/info.pl
 t/template.t
 xt/package-names.t
