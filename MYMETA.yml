@@ -10,9 +10,9 @@ build_requires:
   File::Temp: 0
   Test::More: 0
 configure_requires:
-  ExtUtils::MakeMaker: 0
+  ExtUtils::MakeMaker: 6.59
 dynamic_config: 0
-generated_by: 'ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.112150'
+generated_by: 'Module::Install version 1.06, CPAN::Meta::Converter version 2.112150'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,8 +20,9 @@ meta-spec:
 name: Sys-Cmd
 no_index:
   directory:
-    - t
     - inc
+    - t
+    - xt
 requires:
   Carp: 0
   Cwd: 0
@@ -33,4 +34,7 @@ requires:
   POSIX: 0
   Sub::Exporter: 0
   perl: 5.006
-version: 0.07_3
+resources:
+  license: http://dev.perl.org/licenses/
+  repository: http://github.com/mlawren/sys-cmd
+version: 0.08

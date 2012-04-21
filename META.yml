@@ -38,4 +38,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: http://github.com/mlawren/sys-cmd
-version: 0.07_3
+version: 0.08
