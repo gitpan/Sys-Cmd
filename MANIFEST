@@ -17,7 +17,6 @@ lib/Sys/Cmd/Template.pm
 lib/Sys/Cmd/Template.pod
 Makefile.PL
 MANIFEST			This list of files
-MANIFEST.SKIP
 META.yml
 MYMETA.json
 MYMETA.yml
@@ -28,6 +27,3 @@ t/90-command.t
 t/90-output.t
 t/info.pl
 t/template.t
-xt/package-names.t
-xt/pod-coverage.t
-xt/pod.t
