@@ -23,8 +23,8 @@ SYNOPSIS
 
         my @errors = $proc->stderr->getlines;
 
-        $proc->wait_child();  # Done!
-        $proc->close();       # Cleanup
+        $proc->close();       # Finished talking
+        $proc->wait_child();  # Cleanup
 
         # read exit information
         $proc->exit();      # exit status
@@ -160,11 +160,6 @@ METHODS
         scalar context returns a string of the command and its arguments
         joined together by spaces.
 
-    wait_child()
-        Wait for the child to exit and collect the exit status. This method
-        is resposible for setting the *exit*, *signal* and *core*
-        attributes.
-
     close()
         Close all pipes to the child process. This method is automatically
         called when the "Sys::Cmd" object is destroyed. Annoyingly, this
@@ -174,6 +169,11 @@ METHODS
             my $fh = Sys::Cmd->new( %args )->stdout;
 
         So you have to keep track of the Sys::Cmd object manually.
+
+    wait_child()
+        Wait for the child to exit and collect the exit status. This method
+        is resposible for setting the *exit*, *signal* and *core*
+        attributes.
 
 SEE ALSO
     Sys::Cmd::Template
