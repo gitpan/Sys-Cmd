@@ -8,7 +8,6 @@ build_requires:
   ExtUtils::MakeMaker: 6.59
   File::Spec: 0
   File::Temp: 0
-  Test::Command: 0
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.59
@@ -27,16 +26,16 @@ no_index:
     - xt
 requires:
   Carp: 0
-  Cwd: 0
   Exporter::Tidy: 0
   File::Which: 0
   File::chdir: 0
   IO::Handle: 0
   Log::Any: 0
-  Moo: 0
   POSIX: 0
   perl: 5.6.0
 resources:
+  bugtracker: https://github.com/mlawren/p5-Sys-Cmd/issues
+  homepage: https://github.com/mlawren/p5-Sys-Cmd
   license: http://dev.perl.org/licenses/
-  repository: http://github.com/mlawren/sys-cmd
-version: 0.80.2
+  repository: git://github.com/mlawren/p5-Sys-Cmd.git
+version: 0.80.3_2
