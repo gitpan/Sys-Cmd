@@ -2,7 +2,7 @@ NAME
     Sys::Cmd - run a system command or spawn a system processes
 
 VERSION
-    0.80.3 (2013-12-15) Development release
+    0.81.0 (2013-12-23) Development release
 
 SYNOPSIS
         use Sys::Cmd qw/run spawn/;
@@ -43,9 +43,9 @@ DESCRIPTION
         a list instead of a plain string.
 
         The first element of @cmd will be looked up using File::Which if it
-        is not found as a relative file name. The command input and
-        environment can be modified with an optional hashref containing the
-        following key/values:
+        is not a CODE reference, or cannot be found as a relative file name.
+        The command input and environment can be modified with an optional
+        hashref containing the following key/values:
 
         dir The working directory the command will be run in.
 
@@ -69,8 +69,8 @@ DESCRIPTION
         Return a Sys::Cmd object (documented below) representing the process
         running @cmd, with attributes set according to the optional \%opt
         hashref. The first element of the @cmd array is looked up using
-        File::Which if it is not found in the file-system as a relative file
-        name.
+        File::Which if it is not a CODE reference or cannot be found in the
+        file-system as a relative file name.
 
     Sys::Cmd objects can of course be created using the standard "new"
     constructor if you prefer that to the "spawn" function:
@@ -105,7 +105,8 @@ CONSTRUCTOR
 ATTRIBUTES
     All attributes are read-only.
 
-    cmd An array ref containing the command and its arguments.
+    cmd An array ref containing the command or CODE reference and its
+        arguments.
 
     dir The working directory the command will be run in.
 
